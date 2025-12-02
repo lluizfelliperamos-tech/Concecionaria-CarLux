@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarLux Motors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar transparente */
+        .navbar-custom {
+            background: transparent;
+            transition: 0.4s;
+        }
+        .navbar-scrolled {
+            background: rgba(0,0,0,0.85) !important;
+        }
+        /* Hero */
+        #hero {
+            background: url('/img/lamb.webp') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+
+    <!-- HERO SECTION -->
+<section id="hero" class="d-flex align-items-center justify-content-center text-center">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content" data-aos="fade-up">
+        <h1 class="hero-title">A Experiência Automotiva Que Você Merece</h1>
+        <p class="hero-subtitle">Carros de luxo, esportivos e SUVs selecionados para um público exigente.</p>
+
+        <a href="#catalogo" class="btn btn-hero mt-3">Ver Catálogo</a>
+    </div>
+</section>
+
+<style>
+    /* HERO */
+    #hero {
+        height: 90vh;
+        background: url('/img/lamb.webp') center/cover no-repeat;
+        position: relative;
+        color: white;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.55);
+        backdrop-filter: blur(3px);
+    }
+
+    .hero-content {
+        position: relative;
+        max-width: 700px;
+        padding: 40px;
+        background: rgba(255,255,255,0.06);
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.13);
+        backdrop-filter: blur(8px);
+        animation: fadeIn 1.2s ease forwards;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        text-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-top: 12px;
+    }
+
+    .btn-hero {
+        background: white;
+        color: black;
+        padding: 12px 35px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.3s;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-hero:hover {
+        background: #d1d1d1;
+        transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+
+
+  
+
+    <!-- CATÁLOGO DE CARROS -->
+   <section id="catalogo" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">CATÁLOGO DE CARROS</h2>
+
+        <div class="row g-4">
+
+            <!-- CARRO 1 -->
+            <div class="col-md-4">
+                <div class="card car-card shadow-lg">
+                    <img src="https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_580,q_75,w_906/penend4bfq6go3arnfsm.jpg" class="card-img-top" alt="Lamborghini Huracán EVO">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Lamborghini Huracán EVO</h5>
+                        <p class="card-text">Motor V10 – 640 cv • 0–100 km/h em 2.9s</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARRO 2 -->
+            <div class="col-md-4">
+                <div class="card car-card shadow-lg">
+                    <img src="https://cdn.motor1.com/images/mgl/XBGvq9/s1/range-rover-velar-2024-br.jpg" class="card-img-top" alt="Range Rover Velar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Range Rover Velar</h5>
+                        <p class="card-text">SUV Premium • Interior de luxo • Tecnologia avançada</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARRO 3 -->
+            <div class="col-md-4">
+                <div class="card car-card shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1679478878845-af7294f28b27?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9yc2NoZSUyMDkxMSUyMHR1cmJvJTIwc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Porsche 911 Turbo S">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Porsche 911 Turbo S</h5>
+                        <p class="card-text">650 cv • 0–100 km/h em 2.7s • Superesportivo icônico</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARRO 4 -->
+            <div class="col-md-5 lado">
+                <div class="card car-card shadow-lg">
+                    <img src="https://bocamafrapremium.com.br/wp-content/uploads/2024/12/f6cc1c030a3d4deab451df496f239a11_1722599979453.jpg" class="card-img-top" alt="Lamborghini Huracán EVO">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Ferrari F8 Tributo</h5>
+                        <p class="card-text">Motor V8 Biturbo – 720 cv • 0–100 km/h em 2.9s</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARRO 5 -->
+            <div class="col-md-4">
+                <div class="card car-card shadow-lg">
+                    <img src="https://cdn.motor1.com/images/mgl/8LAjo/s1/2020-nissan-gt-r-nismo.jpg" class="card-img-top" alt="Range Rover Velar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Nissan GT-R Nismo</h5>
+                        <p class="card-text">Motor V6 Biturbo • 600 cv • 0–100 km/h em 2.5s • “Godzilla” — ícone dos esportivos japoneses</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+
+    .lado {
+        padding-left: 100px;
+        margin-left: 110px;
+    }
+
+
+    .car-card img {
+        height: 220px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .car-card {
+        border-radius: 12px;
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .car-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+</style>
+
+
+<!-- SOBRE NÓS -->
+<section id="sobre" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- TEXTO -->
+            <div class="col-lg-6 mb-4" data-aos="fade-right">
+                <h2 class="mb-4 text-white fw-bold">Sobre Nós</h2>
+                <p class="sobre-text">
+                    Somos uma empresa especializada em venda de veículos de luxo, esportivos e SUVs premium.
+                    Nosso compromisso é entregar a melhor experiência automotiva, combinando curadoria exclusiva,
+                    atendimento personalizado e transparência total.
+                </p>
+
+                <p class="sobre-text">
+                    Cada veículo é selecionado com rigor técnico e passa por inspeções avançadas para garantir 
+                    qualidade, desempenho e procedência. Aqui, você encontra carros que representam estilo, potência e sofisticação.
+                </p>
+
+                <a href="#contato" class="btn btn-hero mt-3">Fale Conosco</a>
+            </div>
+
+            <!-- IMAGEM VIDRO -->
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="sobre-card">
+                    <img src="/img/carlux.png"
+                         class="img-fluid rounded-4" alt="Empresa de Carros">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    #sobre {
+        background: #0f0f0f;
+        color: white;
+    }
+
+    .sobre-card {
+        background: rgba(255,255,255,0.07);
+        padding: 18px;
+        border-radius: 25px;
+        border: 1px solid rgba(255,255,255,0.1);
+        backdrop-filter: blur(8px);
+        transition: 0.3s;
+    }
+
+    .sobre-card:hover {
+        transform: scale(1.02);
+    }
+
+    .sobre-text {
+        opacity: 0.85;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+</style>
+
+
+
+<!-- CATÁLOGO -->
+<section id="catalogo" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">CATEGÓRIAS</h2>
+
+        <!-- FILTROS -->
+         <div class="row mb-4">
+    <div class="col-md-6 mx-auto">
+        <input type="text" id="buscaCarro" class="form-control" placeholder="Buscar por nome, marca ou categoria...">
+    </div>
+</div>
+        <div class="row mb-4" data-aos="fade-up">
+            <div class="col-md-4">
+                <select id="filtroCategoria" class="form-select">
+                    <option value="todos">Todas as Categorias</option>
+                    <option value="esportivo">Esportivos</option>
+                    <option value="suv">SUVs</option>
+                    <option value="luxo">Luxo</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select id="filtroPreco" class="form-select">
+                    <option value="todos">Todos os Preços</option>
+                    <option value="1">Até R$ 500 mil</option>
+                    <option value="2">R$ 500 mil – R$ 1 milhão</option>
+                    <option value="3">Acima de R$ 1 milhão</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select id="filtroPotencia" class="form-select">
+                    <option value="todos">Todas as Potências</option>
+                    <option value="400">Até 400 cv</option>
+                    <option value="600">400–600 cv</option>
+                    <option value="800">Acima de 600 cv</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- LISTA DE CARROS -->
+        <div id="carList" class="row g-4">
+            <!-- Os cards existentes permanecem, só adicionamos classes e atributos -->
+            <!-- Exemplo de card adaptado: -->
+
+            <div class="col-md-4 car-item" data-categoria="esportivo" data-preco="3" data-potencia="640">
+                <div class="card car-card shadow-lg">
+                    <img src="https://cdn.motor1.com/images/mgl/W8YyAO/s1/porsche-911-gt3-mit-weissach-paket-2025.jpg" class="card-img-top" alt="Lamborghini Huracán EVO">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Porsche 911 GT3</h5>
+                        <p class="card-text">Preço: R$ 1.200.000 510 cv</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 car-item" data-categoria="suv" data-preco="3" data-potencia="640">
+                <div class="card car-card shadow-lg">
+                    <img src="https://cdn.motor1.com/images/mgl/676yb/s1/2020-bmw-x6-m-competition.jpg" class="card-img-top" alt="Lamborghini Huracán EVO">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">BMW X6 M Competition</h5>
+                        <p class="card-text">Preço: R$ 1.100.000 – 625 cv</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+
+              
+            <div class="col-md-4 car-item" data-categoria="luxo" data-preco="3" data-potencia="640">
+                <div class="card car-card shadow-lg">
+                    <img src="https://www.cnet.com/a/img/resize/7aeaa084f37b1aad0764433e41a89fe4a3d811a5/hub/2021/07/28/60c44e6d-d3b0-49cb-9454-1b0082231419/s580-ogi.jpg?auto=webp&fit=crop&height=675&width=1200" class="card-img-top" alt="Lamborghini Huracán EVO">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Mercedes-Benz S 580</h5>
+                        <p class="card-text">Preço: R$ 1.350.000 – 503 cv</p>
+                        <a href="#" class="btn btn-dark w-100">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 car-item" data-categoria="esportivo" data-preco="3" data-potencia="650">
+    <div class="card car-card shadow-lg">
+        <img src="https://i.ytimg.com/vi/GXwaQIZJkp8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCZpGeoVSa2ItwlizNcasqfkT07BQ" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Porsche 911 Turbo S</h5>
+            <p class="card-text">Preço: R$ 1.600.000 – 650 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-md-4 car-item" data-categoria="esportivo" data-preco="3" data-potencia="720">
+    <div class="card car-card shadow-lg">
+        <img src="https://pugachev.miami/wp-content/uploads/2024/08/ferrari-f8-tributo-red-miami-1-705x444.jpg" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Ferrari F8 Tributo</h5>
+            <p class="card-text">Preço: R$ 3.500.000 – 720 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 car-item" data-categoria="esportivo" data-preco="3" data-potencia="620">
+    <div class="card car-card shadow-lg">
+        <img src="https://cdn.motor1.com/images/mgl/xqZoAk/s1/2023-audi-r8-v10-gt-rwd.webp" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Audi R8 V10 Performance</h5>
+            <p class="card-text">Preço: R$ 1.400.000 – 620 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 car-item" data-categoria="suv" data-preco="3" data-potencia="612">
+    <div class="card car-card shadow-lg">
+        <img src="https://s2-autoesporte.glbimg.com/7VGKOlWsGdEKCTixERnQSqdBpSM=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2021/F/F/nTgPo8Rvusn4DFawxBwA/2020-mercedes-amg-gle-63-coupe-1-.jpg" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Mercedes-AMG GLE 63 S</h5>
+            <p class="card-text">Preço: R$ 1.000.000 – 612 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 car-item" data-categoria="suv" data-preco="3" data-potencia="640">
+    <div class="card car-card shadow-lg">
+        <img src="https://cdn.motor1.com/images/mgl/P3nz4y/s1/porsche-cayenne-2023.jpg" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Porsche Cayenne Turbo GT</h5>
+            <p class="card-text">Preço: R$ 1.300.000 – 640 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 car-item" data-categoria="suv" data-preco="2" data-potencia="575">
+    <div class="card car-card shadow-lg">
+        <img src="https://img.odcdn.com.br/wp-content/uploads/2021/08/Range-Rover-Sport-SVR-ediccao-limitada-1.jpeg" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Range Rover Sport SVR</h5>
+            <p class="card-text">Preço: R$ 900.000 – 575 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 car-item" data-categoria="luxo" data-preco="3" data-potencia="612">
+    <div class="card car-card shadow-lg">
+        <img src="https://external-preview.redd.it/tz0qL_-pMkeGw3InadX-c6slWsjW7K8e0pqVvJrb2OI.jpg?auto=webp&s=daed9ce99059dde6b0e053c71d90dedfddc508bf" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Mercedes-Maybach S680</h5>
+            <p class="card-text">Preço: R$ 2.000.000 – 612 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 car-item" data-categoria="luxo" data-preco="3" data-potencia="544">
+    <div class="card car-card shadow-lg">
+        <img src="https://i.ytimg.com/vi/Hh0NsWSjESw/maxresdefault.jpg" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">BMW Série 7 760i</h5>
+            <p class="card-text">Preço: R$ 1.100.000 – 544 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-4 car-item" data-categoria="luxo" data-preco="2" data-potencia="460">
+    <div class="card car-card shadow-lg">
+        <img src="https://cdn.motor1.com/images/mgl/8QMwo/s1/2022-audi-a8-l.jpg" class="card-img-top">
+        <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Audi A8 L</h5>
+            <p class="card-text">Preço: R$ 900.000 – 460 cv</p>
+            <a href="#" class="btn btn-dark w-100">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Os outros carros já adicionados pelo usuário permanecem intactos -->
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ===== GALERIA ANIMADA / SHOWROOM ===== 
+<section id="galeria" class="py-5" style="background:#0a0a0a;">
+    <div class="container">
+        <h2 class="text-center text-light mb-4 fw-bold" style="font-size: 2.5rem;">
+            Showroom Premium
+        </h2>
+
+        <div class="row g-4">
+
+           
+            <div class="col-md-4 fade-card topo">
+                <div class="galeria-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0853/0663/8612/files/Top_10_carros_esportivos_de_luxo-bugatti-centodieci_600x600.png?v=1746035670" class="img-fluid" alt="">
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 fade-card">
+                <div class="galeria-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0853/0663/8612/files/Top_10_carros_esportivos_de_luxo_Lamborghini_Veneno_600x600.jpg?v=1746035443" class="img-fluid" alt="">
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 fade-card">
+                <div class="galeria-card">
+                    <img src="https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid" alt="">
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 fade-card baixo">
+                <div class="galeria-card">
+                    <img src="https://www.tribunapr.com.br/wp-content/uploads/2021/10/25124011/01_shutterstock_788323441.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+ <style>
+
+    .topo{
+        margin-top: 70px;
+    }
+
+    .baixo{
+        margin-left: 440px;
+        margin-bottom: 100px;
+    }
+
+    .galeria-card {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: transform .4s ease, box-shadow .4s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.galeria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.galeria-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 18px rgba(0, 255, 170, 0.4);
+}
+
+.galeria-card:hover img {
+    transform: scale(1.12);
+}
+
+/* Fade ao aparecer */
+.fade-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease-out;
+}
+
+.fade-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ </style>
+
+ -->
+
+
+<!-- SEÇÃO DE SERVIÇOS DARK/LUX COM ÍCONES 3D E LINHA ANIMADA -->
+<section id="servicos" class="py-5" style="background:#0d0d0d; color:white;">
+    <div class="container">
+        <h2 class="text-center mb-4" style="font-weight:700; letter-spacing:1px;">Nossos Serviços</h2>
+
+        <!-- Linha Animada -->
+        <div class="line-anim mx-auto mb-5"></div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 - Venda Premium -->
+            <div class="col-md-4 premium">
+                <div class="service-card p-4 text-center h-100">
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/sports-car-3d-icon-6589535-5456343.png" class="service-icon" alt="Venda Premium">
+                    <h4 class="mt-3">Venda Premium</h4>
+                    <p>Experiência exclusiva de compra com curadoria de veículos raros e de alto padrão.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 - Consultoria Especializada -->
+            <div class="col-md-4 consultoria">
+                <div class="service-card p-4 text-center h-100">
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/customer-support-3d-icon-5110556-4263900.png" class="service-icon" alt="Consultoria">
+                    <h4 class="mt-3">Consultoria Especializada</h4>
+                    <p>Acompanhamento personalizado para ajudar você a escolher o carro perfeito.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ESTILIZAÇÃO -->
+<style>
+
+    .premium{
+        margin-left: 215px;
+    }
+
+
+
+    .service-card {
+        background: #111;
+        border-radius: 18px;
+        transition: 0.3s;
+        border: 1px solid #222;
+    }
+
+    .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        border: 1px solid #444;
+    }
+
+    .service-icon {
+        width: 90px;
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+        transition: 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.08) rotate(2deg);
+    }
+
+    .line-anim {
+        width: 140px;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, white, transparent);
+        animation: shine 2s infinite;
+        border-radius: 50px;
+    }
+
+    @keyframes shine {
+        0% {opacity: 0.2; transform: scaleX(0.5);}   
+        50% {opacity: 1; transform: scaleX(1);}  
+        100% {opacity: 0.2; transform: scaleX(0.5);}  
+    }
+</style>
+
+
+<!-- ESTILIZAÇÃO -->
+<style>
+    .service-card {
+        background: #111;
+        border-radius: 18px;
+        transition: 0.3s;
+        border: 1px solid #222;
+    }
+
+    .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        border: 1px solid #444;
+    }
+
+    .service-icon {
+        width: 90px;
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+        transition: 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.08) rotate(2deg);
+    }
+
+    .line-anim {
+        width: 140px;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, white, transparent);
+        animation: shine 2s infinite;
+        border-radius: 50px;
+    }
+
+    @keyframes shine {
+        0% {opacity: 0.2; transform: scaleX(0.5);}   
+        50% {opacity: 1; transform: scaleX(1);}  
+        100% {opacity: 0.2; transform: scaleX(0.5);}  
+    }
+</style>
+  
+    <!-- FOOTER -->
+    <footer class="py-3 bg-black text-center">
+        <p class="mb-0">© 2025 CarLux Motors</p>
+    </footer>
+
+    <script>
+        // Navbar muda quando rola
+        const nav = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if(window.scrollY > 50) nav.classList.add("navbar-scrolled");
+            else nav.classList.remove("navbar-scrolled");
+        });
+
+      
+    const filtroCategoria = document.getElementById("filtroCategoria");
+    const filtroPreco = document.getElementById("filtroPreco");
+    const filtroPotencia = document.getElementById("filtroPotencia");
+    const carros = document.querySelectorAll(".car-item");
+
+    function filtrar() {
+        const categoriaSelecionada = filtroCategoria.value;
+        const precoSelecionado = filtroPreco.value;
+        const potenciaSelecionada = filtroPotencia.value;
+
+        carros.forEach(carro => {
+            const categoria = carro.dataset.categoria;
+            const preco = carro.dataset.preco;        // 1, 2 ou 3
+            const potencia = carro.dataset.potencia;  // número em cv
+
+            let mostrar = true;
+
+            // Filtro por categoria
+            if (categoriaSelecionada !== "todos" && categoria !== categoriaSelecionada) {
+                mostrar = false;
+            }
+
+            // Filtro por preço
+            if (precoSelecionado !== "todos" && preco !== precoSelecionado) {
+                mostrar = false;
+            }
+
+            // Filtro por potência
+            if (potenciaSelecionada !== "todos") {
+                const pot = parseInt(potencia);
+
+                if (potenciaSelecionada === "400" && pot > 400) mostrar = false;
+                if (potenciaSelecionada === "600" && (pot < 400 || pot > 600)) mostrar = false;
+                if (potenciaSelecionada === "800" && pot < 600) mostrar = false;
+            }
+
+            // Mostrar / esconder
+            carro.style.display = mostrar ? "block" : "none";
+        });
+    }
+
+    filtroCategoria.addEventListener("change", filtrar);
+    filtroPreco.addEventListener("change", filtrar);
+    filtroPotencia.addEventListener("change", filtrar);
+
+
+   
+    const campoBusca = document.getElementById("buscaCarro");
+
+    campoBusca.addEventListener("keyup", function () {
+        const termo = campoBusca.value.toLowerCase().trim();
+
+        document.querySelectorAll(".car-item").forEach(carro => {
+            const nome = carro.querySelector(".card-title").textContent.toLowerCase();
+            const categoria = carro.dataset.categoria.toLowerCase();
+            const textoCard = carro.textContent.toLowerCase();
+
+            const combina =
+                nome.includes(termo) ||
+                categoria.includes(termo) ||
+                textoCard.includes(termo);
+
+            carro.style.display = combina ? "block" : "none";
+        });
+    });
+
+
+document.addEventListener("scroll", () => {
+    document.querySelectorAll(".fade-card").forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            card.classList.add("visible");
+        }
+    });
+});
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
